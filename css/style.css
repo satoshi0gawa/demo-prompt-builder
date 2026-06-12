@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  /* text-rendering: optimizeSpeed; */
+  text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
@@ -28,114 +28,6 @@ a {
   color: inherit;
 }
 
-.cs-reset *,
-.cs-reset *::before,
-.cs-reset *::after {
-  box-sizing: border-box;
-}
-
-.cs-reset h1,
-.cs-reset h2,
-.cs-reset h3,
-.cs-reset h4,
-.cs-reset h5,
-.cs-reset h6,
-.cs-reset p,
-.cs-reset figure,
-.cs-reset blockquote,
-.cs-reset dl,
-.cs-reset dd {
-  margin: 0;
-}
-
-.cs-reset ul,
-.cs-reset ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.cs-reset img,
-.cs-reset picture,
-.cs-reset svg,
-.cs-reset video,
-.cs-reset canvas {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.cs-reset picture {
-  display: block;
-}
-
-.cs-reset a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.cs-reset a:focus-visible,
-.cs-reset button:focus-visible,
-.cs-reset input:focus-visible,
-.cs-reset textarea:focus-visible,
-.cs-reset select:focus-visible,
-.cs-reset summary:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
-}
-
-.cs-reset input,
-.cs-reset button,
-.cs-reset textarea,
-.cs-reset select {
-  font: inherit;
-  color: inherit;
-}
-
-.cs-reset button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  appearance: none;
-}
-
-.cs-reset textarea {
-  resize: vertical;
-}
-
-.cs-reset table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-.cs-reset iframe {
-  display: block;
-  max-width: 100%;
-  border: 0;
-}
-
-.cs-reset fieldset {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-.cs-reset legend {
-  padding: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cs-reset *,
-  .cs-reset *::before,
-  .cs-reset *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 :root {
   /* ユーザーが管理画面から調整する倍率（デフォルト 1.0 = 100%） */
   --font-body-scale: 1;
@@ -752,7 +644,7 @@ img {
   align-content: start;
   gap: 14px;
 }
-.prompt-builder-ec-modal__body .prompt-builder-ec-modal__copyright {
+.prompt-builder-ec-modal__copyright {
   align-self: end;
   margin-top: 0;
   color: #9a9a9a;
@@ -823,6 +715,10 @@ img {
   font-size: 11px;
   font-weight: 850;
   letter-spacing: 0.08em;
+}
+
+.prompt-builder-ec-modal__body .prompt-builder-ec-modal__copyright {
+  font-size: 10px;
 }
 
 .prompt-builder-ec-toast {
