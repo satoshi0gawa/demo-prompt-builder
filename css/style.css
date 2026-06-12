@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  text-rendering: optimizeSpeed;
+  /* text-rendering: optimizeSpeed; */
   line-height: 1.5;
 }
 
