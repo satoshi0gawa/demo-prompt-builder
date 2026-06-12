@@ -752,7 +752,7 @@ img {
   align-content: start;
   gap: 14px;
 }
-.prompt-builder-ec-modal__copyright {
+.prompt-builder-ec-modal__body .prompt-builder-ec-modal__copyright {
   align-self: end;
   margin-top: 0;
   color: #9a9a9a;
