@@ -750,6 +750,14 @@ img {
   align-content: start;
   gap: 14px;
 }
+.prompt-builder-ec-modal__copyright {
+  margin-top: 40px;
+  color: #9a9a9a;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.6;
+  text-align: center;
+}
 .prompt-builder-ec-modal__close {
   position: absolute;
   top: 47px;

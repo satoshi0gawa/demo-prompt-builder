@@ -682,6 +682,15 @@
     gap: 14px;
   }
 
+  &__copyright {
+    margin-top: 40px;
+    color: #9a9a9a;
+    font-size: 12px;
+    font-weight: 650;
+    line-height: 1.6;
+    text-align: center;
+  }
+
   &__close {
     position: absolute;
     top: 47px;
