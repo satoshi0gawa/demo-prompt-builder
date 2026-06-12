@@ -719,6 +719,7 @@ img {
 .prompt-builder-ec-modal__body {
   position: relative;
   display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
   gap: 14px;
   box-sizing: border-box;
   width: min(1180px, 100vw - 48px);
@@ -741,6 +742,7 @@ img {
   line-height: 1.8;
 }
 .prompt-builder-ec-modal__layout {
+  align-self: center;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
   gap: 56px;
@@ -751,9 +753,10 @@ img {
   gap: 14px;
 }
 .prompt-builder-ec-modal__copyright {
-  margin-top: 40px;
+  align-self: end;
+  margin-top: 0;
   color: #9a9a9a;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 650;
   line-height: 1.6;
   text-align: center;
@@ -981,7 +984,9 @@ body {
 }
 @media (max-width: 768px) {
   .prompt-builder-ec-modal__layout {
+    align-self: start;
     grid-template-columns: 1fr;
+    gap: 32px;
   }
   .prompt-builder-ec-modal__body {
     width: calc(100vw - 32px);
