@@ -1,0 +1,28 @@
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$radius-md: 8px;
+
+// breakpoints
+$bp-md: 750px;
+
+// layout
+$container-max: 1200px;
+$container-gutter: 16px;
+
+:root {
+  /* ユーザーが管理画面から調整する倍率（デフォルト 1.0 = 100%） */
+  --font-body-scale: 1;
+
+  --space-2: #{$space-2};
+  --space-3: #{$space-3};
+  --space-4: #{$space-4};
+  --radius-md: #{$radius-md};
+
+  --container-max: #{$container-max};
+  --container-gutter: #{$container-gutter};
+
+  --color-text: #111;
+  --color-bg: #fff;
+  --border: rgb(0 0 0 / 0.12);
+}

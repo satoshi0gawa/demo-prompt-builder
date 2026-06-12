@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "sass:meta";
+$breakpoints: (
+  sp: 480px,
+  tab: 768px,
+  pc: 1024px,
+);
+@mixin mq($bp, $type: min) {
+  $value: null;
+  @if map.has-key($breakpoints, $bp) {
+    $value: map.get($breakpoints, $bp);
+  } @else {
+    $value: $bp;
+  }
+  @if $value == null {
+    @error "mq(): #{$bp} is not defined in \$breakpoints.";
+  }
+  @media (#{$type}-width: #{$value}) {
+    @content;
+  }
+}
+// @include mq(sp) { ... }
+// @include mq(tab) { ... }
+// @include mq(900px) { ... }
+// @include mq(pc, max) { ... }
+
+@mixin container {
+  width: min(100% - (var(--container-gutter) * 2), var(--container-max));
+  margin-inline: auto;
+}

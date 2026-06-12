@@ -1,0 +1,151 @@
+// ========================================
+//   dev-reset.css scoped reset layer
+//   Shopify custom section scoped reset
+//   ----------------------------------------
+//   目的：
+//   - Shopifyテーマ既存スタイルを壊さずに
+//     cs- セクション内だけを整える
+//   - BEM設計 / セクション単位設計と相性よく使う
+//   - グローバル汚染を防ぐ
+//   ========================================
+
+// ----------------------------------------
+//   0. ルート
+//   ----------------------------------------
+.cs-reset *,
+.cs-reset *::before,
+.cs-reset *::after {
+  box-sizing: border-box;
+}
+
+// ----------------------------------------
+//   1. 見出し・テキスト要素の余白リセット
+//   ----------------------------------------
+.cs-reset h1,
+.cs-reset h2,
+.cs-reset h3,
+.cs-reset h4,
+.cs-reset h5,
+.cs-reset h6,
+.cs-reset p,
+.cs-reset figure,
+.cs-reset blockquote,
+.cs-reset dl,
+.cs-reset dd {
+  margin: 0;
+}
+
+// ----------------------------------------
+//   2. リストの装飾と余白リセット
+//   ----------------------------------------
+.cs-reset ul,
+.cs-reset ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// ----------------------------------------
+//   3. 画像・メディア要素
+//   ----------------------------------------
+.cs-reset img,
+.cs-reset picture,
+.cs-reset svg,
+.cs-reset video,
+.cs-reset canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// picture 自体は width を持たないことがあるため補助
+.cs-reset picture {
+  display: block;
+}
+
+// ----------------------------------------
+//   4. リンク
+//   ----------------------------------------
+.cs-reset a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// キーボード操作時の可視フォーカス
+.cs-reset a:focus-visible,
+.cs-reset button:focus-visible,
+.cs-reset input:focus-visible,
+.cs-reset textarea:focus-visible,
+.cs-reset select:focus-visible,
+.cs-reset summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+// ----------------------------------------
+//   5. フォーム要素
+//   ----------------------------------------
+.cs-reset input,
+.cs-reset button,
+.cs-reset textarea,
+.cs-reset select {
+  font: inherit;
+  color: inherit;
+}
+
+.cs-reset button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+}
+
+.cs-reset textarea {
+  resize: vertical;
+}
+
+// ----------------------------------------
+//   6. テーブル系（必要時の破綻防止）
+//   ----------------------------------------
+.cs-reset table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// ----------------------------------------
+//   7. iframe など埋め込み要素
+//   ----------------------------------------
+.cs-reset iframe {
+  display: block;
+  max-width: 100%;
+  border: 0;
+}
+
+// ----------------------------------------
+//   8. 要素のデフォルト余白差を減らす補助
+//   ----------------------------------------
+.cs-reset fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.cs-reset legend {
+  padding: 0;
+}
+
+// ----------------------------------------
+//   9. reduce motion
+//   ----------------------------------------
+@media (prefers-reduced-motion: reduce) {
+  .cs-reset *,
+  .cs-reset *::before,
+  .cs-reset *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
